@@ -1,0 +1,21 @@
+@page { ... }
+@page :left { ... }
+@page :right { ... }
+@page LandscapeTable { ... }
+@page CompanyLetterHead:first { ... } /*  identifier and pseudo page. */
+@page:first { ... }
+@page toc, index { ... }
+@page :blank:first { ... }
+The following are examples of page-margin boxes where the declaration blocks are intentionally left blank.
+
+@page {
+ @top-left { ... /* document name */ }
+ @bottom-center { ... /* page number */}
+}
+@page :left { @left-middle { ... /* page number in left margin */ }}
+@page :right{ @right-middle { ... /* page number in right margins of right pages */}}
+
+@page :left { @bottom-left-corner { ... /* left page numbers */ }}
+@page :right { @bottom-right-corner { ... /* right page numbers */ }}
+@page :first { @bottom-left-corner { ... /* empty footer on 1st page */ }
+             @bottom-right-corner { ... /* empty footer */ } }
